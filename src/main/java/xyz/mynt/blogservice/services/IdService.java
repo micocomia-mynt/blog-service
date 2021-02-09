@@ -10,8 +10,4 @@ public class IdService {
     public String getNextBlogId() {
         return UUID.randomUUID().toString();
     }
-
-    public String generateCode(int size) {
-        return RandomStringUtils.randomAlphanumeric(size);
-    }
 }

@@ -155,10 +155,7 @@
    ```
    ```json  
     {
-        "title": "Sample Blog",
         "content": "This is the edited content",
-        "datePublished": "2020-01-01",
-        "author": "Mary Doe"
     }
     ```
 
@@ -192,19 +189,17 @@
    ```
    ```json
     {
-        "title": "Sample Blog",
-        "content": "This is the edited content",
-        "datePublished": "2020-01-01"
+        "content": ""
     }
     ```
-   *Response if one or more fields are missing:*
+   *Response if content is empty*
     ```json
     {
-        "timestamp": "2021-02-09T10:05:40.619+00:00",
-        "status": 400,
-        "error": "Bad Request",
-        "message": "",
-        "path": "/blogs/496e8fe2-455c-4d4c-b4b4-e07b67dc28d3"
+       "timestamp": "2021-02-09T14:13:24.569+00:00",
+       "status": 400,
+       "error": "Bad Request",
+       "message": "",
+       "path": "/blogs/2b647dc2-f66f-4ac0-8f75-43cd2d8da9f1"
     }
     ```
 

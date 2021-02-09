@@ -59,7 +59,7 @@ public class BlogController {
 
     @PutMapping(path = "blogs/{Id}")
     public ResponseEntity<Map<String, String>> updateBlog(@PathVariable String Id,
-                                             @Valid @RequestBody BlogCreation request) throws BlogNotFoundException {
+                                             @Valid @RequestBody BlogUpdate request) throws BlogNotFoundException {
         LOGGER.info("Updating blog {}",Id);
         Map<String, String> response = new HashMap<>();
 

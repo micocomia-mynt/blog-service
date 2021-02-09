@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import xyz.mynt.blogservice.Blog;
 import xyz.mynt.blogservice.BlogCreation;
+import xyz.mynt.blogservice.BlogUpdate;
 import xyz.mynt.blogservice.exceptions.BlogListEmptyException;
 import xyz.mynt.blogservice.exceptions.BlogNotFoundException;
 
@@ -47,7 +48,7 @@ public class BlogService {
             throw new BlogListEmptyException("Blog list is empty.");
         }
         return blogs;
-    };
+    }
 
     public Blog getBlogById(String Id) throws BlogNotFoundException{
        return blogs.stream()
@@ -56,16 +57,10 @@ public class BlogService {
                 .orElseThrow(() -> new BlogNotFoundException("Blog does not exist"));
     }
 
-    public void updateBlog(Blog blog, BlogCreation blogCreation){
+    public void updateBlog(Blog blog, BlogUpdate blogUpdate){
         int blogIndex = blogs.indexOf(blog);
 
-        // get user id
-        LocalDate parsedPublished = LocalDate.parse(blogCreation.getDatePublished());
-
-        blog.setTitle(blogCreation.getTitle());
-        blog.setAuthor(blogCreation.getAuthor());
-        blog.setContent(blogCreation.getContent());
-        blog.setDatePublish(parsedPublished);
+        blog.setContent(blogUpdate.getContent());
 
         blogs.set(blogIndex, blog);
     }
