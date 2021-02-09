@@ -199,7 +199,7 @@
        "status": 400,
        "error": "Bad Request",
        "message": "",
-       "path": "/blogs/2b647dc2-f66f-4ac0-8f75-43cd2d8da9f1"
+       "path": "/blogs/496e8fe2-455c-4d4c-b4b4-e07b67dc28d3"
     }
     ```
 
